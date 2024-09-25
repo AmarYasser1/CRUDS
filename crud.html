@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CRUDS Operations</title>
+</head>
+<body>
+    <div class="curd">
+        <div class="head">
+            <h2>CRUDS</h2>
+            <p>PRODUCT MANAGEMENT SYSTEM</p>
+        </div>
+
+        <div class="inputs">
+            <input type="text" placeholder="Title" id="title">
+
+            <div class="price">
+                <input onkeyup="getTotalPrice()" type="number" placeholder="Price" id="price">
+                <input onkeyup="getTotalPrice()" type="number" placeholder="Taxes" id="taxes">
+                <input onkeyup="getTotalPrice()" type="number" placeholder="Ads" id="ads">
+                <input onkeyup="getTotalPrice()" type="number" placeholder="Discount" id="discount">
+                <small id="total"></small>
+            </div>
+
+            <input type="number" placeholder="Count" id="count">
+            <input type="text" placeholder="Category" id="category">
+            <button id="createBtn">Create</button>
+        </div>
+
+        <div class="outputs">
+            <div class="search">
+                <input onkeyup="searchProduct(this.value)" type="text" id="search" placeholder="Search">
+                <button onclick="searchCheck(this.id)" id="searchByTitle">Search by title</button>
+                <button onclick="searchCheck(this.id)" id="searchByCategory">Search by category</button>
+            </div>
+            
+            <div id="deleteAllData">
+
+            </div>
+            <table>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Taxes</th>
+                    <th>Ads</th>
+                    <th>Discount</th>
+                    <th>Total</th>
+                    <th>Category</th>
+                    <th>Count</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+
+                <tbody id="contentTable">
+                    <!-- The code in main.js -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
